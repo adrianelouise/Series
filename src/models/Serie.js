@@ -1,24 +1,23 @@
-  const mongoose  = require("mongoose");
+const mongoose = require("mongoose");
 
-  const serieSchema = new mongoose.Schema({
-     nome: {
-       type:String,
-       required: true},
-     ano: {
-        trype:String,
-        required: true},
-    genero:{
-        trype:String,
-        required: true},
-     classificacao: {
-        trype:String,
-        required: true},
-     diretor: {
-        trype:String,
-        requerid: true},
+const serieSchema = new mongoose.Schema({
+    nome: { 
+        type: String, 
+        required: true },
+    ano: { 
+        type: String, 
+        required: true },
+    genero: { 
+        type: String, 
+        required: true },
+    classificacao: { 
+        type: String, 
+        required: true },
+    diretor: { 
+        type: String, 
+        required: true },
+});
 
-     });
+const Serie = mongoose.model("Serie", serieSchema);
 
-     const Serie = mongoose.mode("Serie",serieSchema);
-
-     module.exports = Serie;
+module.exports = Serie;
